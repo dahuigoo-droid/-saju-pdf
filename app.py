@@ -247,10 +247,10 @@ def create_pdf(content, customer_name):
     
     styles = getSampleStyleSheet()
     
-    # 나눔고딕 ExtraBold 폰트 등록
+    # 나눔고딕 폰트 등록
     try:
-        pdfmetrics.registerFont(TTFont('NanumGothicExtraBold', 'NanumGothicExtraBold.otf'))
-        font_name = 'NanumGothicExtraBold'
+        pdfmetrics.registerFont(TTFont('NanumGothic', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'))
+        font_name = 'NanumGothic'
     except:
         font_name = 'Helvetica'
     
