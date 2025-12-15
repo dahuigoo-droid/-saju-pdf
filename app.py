@@ -253,15 +253,29 @@ def create_pdf(content, customer_name):
     # 한글 스타일 (기본 폰트 사용 - 배포 환경에서는 한글 폰트 설치 필요)
     # Streamlit Cloud에서는 나눔고딕이 기본 설치됨
     try:
-        pdfmetrics.registerFont(TTFont('NanumGothic', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'))
-        font_name = 'NanumGothic'
+        pdfmetrics.registerFont(TTFont('NanumGothicExtraBold', 'NanumGothicExtraBold.otf'))
+        font_name = 'NanumGothicExtraBold'
     except:
-        try:
-            pdfmetrics.registerFont(TTFont('NanumGothic', 'NanumGothic.ttf'))
-            font_name = 'NanumGothic'
-        except:
-            font_name = 'Helvetica'  # 폰트 없으면 기본 폰트 사용
-    
+        font_name = 'Helvetica'
+```
+
+그리고 **Commit changes** 클릭!
+
+---
+
+### Step 3: 앱 재시작
+
+Streamlit Cloud에서 **Reboot app** 클릭
+
+---
+
+## 📁 최종 파일 구성
+```
+saju-pdf-generator/
+├── app.py
+├── requirements.txt
+├── packages.txt
+└── NanumGothicExtraBold.otf   ← 폰트 파일 추가!
     # 커스텀 스타일 생성
     title_style = ParagraphStyle(
         'CustomTitle',
