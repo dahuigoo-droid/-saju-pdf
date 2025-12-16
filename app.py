@@ -40,7 +40,7 @@ PAGE_IMAGE = "page_bg.jpg"
 SERVICE_TYPES = ["사주", "연애", "타로"]
 
 # PDF 설정 (페이지 수 조절용)
-PDF_FONT_SIZE = 14  # 폰트 크기
+PDF_FONT_SIZE = 17  # 폰트 크기
 PDF_LINE_HEIGHT = 24  # 행간
 PDF_MARGIN = 65  # 여백
 CHARS_PER_PAGE = 800  # 페이지당 예상 글자 수
